@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "test:security": "node --test test/dependency-security.test.cjs"
   },
   "private": true,
   "dependencies": {
@@ -36,5 +37,12 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
     "typescript": "~5.9.2"
+  },
+  "overrides": {
+    "fast-uri": "3.1.7",
+    "sockjs": {
+      "uuid": "11.1.1"
+    },
+    "serialize-javascript": "7.1.2"
   }
 }
